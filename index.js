@@ -8,6 +8,10 @@ app.get('/' ,(req, res)=>{
 app.get('/ping' ,(req, res)=>{
     res.send({msg : 'pong'})
 })
+app.get('/welcome' ,(req, res)=>{
+    res.send({msg : `WELCOME HOME ${process.env.NAME}`})
+
+})
 
 const port = process.env.PORT
 app.listen(port, ()=>{
